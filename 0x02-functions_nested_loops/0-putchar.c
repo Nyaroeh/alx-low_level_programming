@@ -1,20 +1,20 @@
 #include "main.h"
-
 /**
- * main - Entry point
- *
- * Return: Always returns 0 (Success)
- */
+* main - entry point
+* description: use the _putchar function to print text
+* Return: 0 Always
+*/
 int main(void)
 {
-	putchar('');
-	_putchar('p');
-	_putchar('u');
-	_putchar('t');
-	_putchar('c');
-	_putchar('h');
-	_putchar('a');
-	_putchar('r');
+	char text[] = "_putchar";
+	int i = 0;
+
+	while (text[i] != '\0')
+	{
+		_putchar(text[i]);
+		i++;
+	}
 	_putchar('\n');
+
 	return (0);
 }
