@@ -1,30 +1,19 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_square - check the code
- * @size: parameter to be measured
- *
- * Return: Empty.
+ * print_square - function to print a square
+ * @size: takes in the size of the square
  */
 
 void print_square(int size)
 {
-	int x, y;
-
-	if (size <= 0)
-	{
-	_putchar('\n');
-	}
-	else
-	{
-	for (x = 0; x < size; x++)
-	{
-	for (y = 0; y < size; y++)
-	{
-	_putchar(35);
-	}
-	_putchar('\n');
-	}
-	}
+int i, j;
+if (size <= 0)
+_putchar('\n');
+for (i = 0; i < size; i++)
+{
+for (j = 0; j < size; j++)
+_putchar('#');
+_putchar('\n');
+}
 }
