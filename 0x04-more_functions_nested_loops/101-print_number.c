@@ -1,42 +1,92 @@
 #include "main.h"
 
 /**
- * print_number - Print an integer
- *
- * @n: The integer to be printed
+ * print_number - Prints an integer
+ * @n: Parameter
  */
+
 void print_number(int n)
 {
-	int num, place_value = 1, reversed_num = 0;
+	unsigned int i, j, count;
 
 	if (n < 0)
 	{
-		_putchar('-');
-		n = -n;
+		_putchar(45);
+		i = n * -1;
 	}
-
-	/* Find highest place value of n*/
-	num = n;
-	while ((num /= 10) > 0)
+	else
 	{
-		place_value *= 10;
+		i = n;
 	}
 
-	/* Reverse the number */
-	num = n;
-	while (num > 0)
+	j = i;
+	count = 1;
+
+	while (j > 9)
 	{
-		reversed_num += (num % 10) * place_value;
-		num /= 10;
-		place_value /= 10;
+		j /= 10;
+		count *= 10;
 	}
 
-	/* Print number run at least once*/
-	num = reversed_num;
-	do {
-		_putchar('0' + (num % 10));
-		num /= 10;
+	for (; count >= 1; count /= 10)
+	{
+		_putchar (((i / count) % 10) + 48);
 	}
-	while ((num > 0))
-		;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
